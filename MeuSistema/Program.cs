@@ -1,9 +1,23 @@
-﻿namespace MeuSistema;
+﻿ namespace MeuSistema;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        int opcao = -1;
+        while (opcao != 0)
+        {
+            Console.WriteLine("1 - Cadastrar usuários");
+            Console.WriteLine("2 - Listar usuários");
+            Console.WriteLine("0 - Sair");
+
+            opcao = int.Parse(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1: Usuarios.Cadastrar(); break;
+                case 2: Usuarios.Listar(); break;
+            }
+        }
     }
 }
