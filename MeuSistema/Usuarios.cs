@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices.Marshalling;
+using System.Security.Cryptography;
 
 class Usuarios
 {
@@ -51,12 +52,23 @@ class Usuarios
         Console.Write("Buscar por nome: ");
         string termo = Console.ReadLine().ToLower();
 
+        bool encontrado = false;
+        
         for (int i = 0; i < nomes.Count; i++)
         {
             if (nomes[i].ToLower().Contains(termo))
             {
                 Console.WriteLine(nomes[i] + " (" + logins[i] + ")");
+                encontrado = true;
             }
+
         }
+         if(encontrado == false)
+            {
+
+            Console.WriteLine("Usúario não encontrado.");
+
+            }
+
     }
 } 
