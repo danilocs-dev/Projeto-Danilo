@@ -46,4 +46,17 @@ class Usuarios
             Console.WriteLine((i + 1) + ". " + nomes[i] + " (" + logins[i] + ")");
        }
     }
-}
+    public static void Buscar()
+    {
+        Console.Write("Buscar por nome: ");
+        string termo = Console.ReadLine().ToLower();
+
+        for (int i = 0; i < nomes.Count; i++)
+        {
+            if (nomes[i].ToLower().Contains(termo))
+            {
+                Console.WriteLine(nomes[i] + " (" + logins[i] + ")");
+            }
+        }
+    }
+} 
