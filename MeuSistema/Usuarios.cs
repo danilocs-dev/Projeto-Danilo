@@ -63,12 +63,35 @@ class Usuarios
             }
 
         }
-         if(encontrado == false)
-            {
+        
+        if(encontrado == false)
+        {
 
-            Console.WriteLine("Usúario não encontrado.");
+            Console.WriteLine("Usuário não encontrado.");
 
-            }
+        }
 
+    }
+
+    public static void Remover()
+    {
+        Console.Write("Usuário a remover: ");
+        string login = Console.ReadLine();
+        int i = logins.IndexOf(login);
+
+        if (i == -1)
+        {
+            Console.WriteLine("Usuário nõa encontrado.");
+            return;
+        }
+        else
+        {
+            Console.WriteLine("Usuário não existe.");
+        }
+
+        nomes.RemoveAt(i);
+        logins.RemoveAt(i);
+        senhas.RemoveAt(i);
+        Console.WriteLine("Usuário removido!");
     }
 } 
