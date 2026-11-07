@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices.Marshalling;
+
 class Usuarios
 {
 
@@ -33,6 +35,15 @@ class Usuarios
     
     public static void Listar()
     {
+        if (nomes.Count == 0)
+        {
+            Console.WriteLine("Nenhum usuário cadastrado.");
+            return;
+        }
         
+        for (int i = 0; i < nomes.Count; i++)
+        {
+            Console.WriteLine((i + 1) + ". " + nomes[i] + " (" + logins[i] + ")");
+       }
     }
 }
