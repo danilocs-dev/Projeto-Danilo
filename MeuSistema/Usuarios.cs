@@ -81,12 +81,8 @@ class Usuarios
 
         if (i == -1)
         {
-            Console.WriteLine("Usuário nõa encontrado.");
+            Console.WriteLine("Usuário não encontrado.");
             return;
-        }
-        else
-        {
-            Console.WriteLine("Usuário não existe.");
         }
 
         nomes.RemoveAt(i);
